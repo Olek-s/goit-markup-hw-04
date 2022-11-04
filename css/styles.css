@@ -8,6 +8,7 @@
   --color-secondary-button: #212121;
   --color-advantages-text: #757575;
   --color-secondary-background: #f5f4fa;
+  --color-icon: #afb1b8;
 }
 * {
   margin: 0px;
@@ -19,6 +20,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 a {
@@ -39,6 +41,15 @@ ul {
 button {
   cursor: pointer;
   font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /*header*/
@@ -154,7 +165,16 @@ button {
   max-width: 100%;
   padding: 200px 0;
   line-height: 1.36;
-  background-color: var(--color-section-background);
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/back-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 0 rgba(47, 48, 58, 0.4);
 }
 
 .hero-title {
@@ -315,6 +335,60 @@ button {
 .team-signature {
   padding: 30px;
   background-color: var(--color-background);
+}
+
+/*section "our clients"*/
+
+.our-clients {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  padding: 94px 0;
+}
+
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.cl-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.cl-logo-frame {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 106px;
+  background-color: var(--color-background);
+  color: #afb1b8;
+  margin: 16px 32px;
+}
+
+.cl-logo-frame img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cl-logo:hover,
+.cl-logo-frame:hover {
+  border-color: var(--color-blue);
+  fill: #2196f3;
+}
+
+.cl-logo-picture {
+  fill: var(--color-icon);
 }
 
 /*footer*/
