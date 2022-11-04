@@ -96,6 +96,7 @@ p {
 }
 
 .nav-item {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
@@ -130,18 +131,24 @@ p {
 }
 
 .nav-item-contact {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
   line-height: 1.1428;
   letter-spacing: 0.02em;
   color: var(--color-advantages-text);
-  gap: 50px;
+  gap: 10px;
   padding: 32px 0;
 }
 
 .nav-item-contact:hover {
   color: var(--color-blue);
+}
+
+.header-icon {
+  fill: currentColor;
 }
 
 .logo {
@@ -162,7 +169,8 @@ p {
 /*main*/
 
 .section-hero {
-  max-width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 200px 0;
   line-height: 1.36;
   background-color: #c4c4c4;
@@ -174,7 +182,6 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0 4px 0 rgba(47, 48, 58, 0.4);
 }
 
 .hero-title {
@@ -219,6 +226,7 @@ p {
   align-items: center;
   padding: 94px 0px;
 }
+/*section advantages*/
 
 .section-advantages {
   display: flex;
@@ -239,9 +247,24 @@ p {
   margin-left: 0px;
 }
 
+.advantages-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f4fa;
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.advantage-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .advantages-item {
   width: 270px;
-  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -367,6 +390,10 @@ p {
   fill: var(--color-primary-white);
 }
 
+.footer .soc-icon {
+  fill: var(--color-primary-white);
+}
+
 .soc-list {
   display: flex;
   gap: 10px;
@@ -389,24 +416,18 @@ p {
 }
 
 .cl-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
 
 .cl-logo-frame {
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
-  width: 106px;
-  background-color: var(--color-background);
-  color: #afb1b8;
-  margin: 16px 32px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
 .cl-logo-frame img {
@@ -416,14 +437,20 @@ p {
   object-fit: cover;
 }
 
-.cl-logo:hover,
-.cl-logo-frame:hover {
+.cl-logo-frame:hover .cl-logo-picture,
+.cl-logo-frame:focus .cl-logo-picture {
+  fill: var(--color-blue);
+}
+
+.cl-logo-frame:hover,
+.cl-logo-frame:focus {
   border-color: var(--color-blue);
-  fill: #2196f3;
 }
 
 .cl-logo-picture {
   fill: var(--color-icon);
+  width: 106px;
+  height: 60px;
 }
 
 /*footer*/
@@ -434,6 +461,21 @@ p {
   background-color: var(--color-section-background);
   max-width: 100%;
   padding: 60px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  gap: 93px;
+}
+
+.footer .soc-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .soc-link:hover,
+.footer .soc-link:focus {
+  background-color: var(--color-blue);
 }
 
 .logo-studio-footer {
@@ -457,7 +499,6 @@ p {
   line-height: 1.7142;
   color: #ffffff;
   text-decoration: none;
-  margin-bottom: 9px;
 }
 
 .mail-address:hover {
@@ -474,6 +515,8 @@ p {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+}
+.address-item {
   margin-bottom: 9px;
 }
 
@@ -495,6 +538,16 @@ p {
 
 .address-phone:hover {
   color: var(--color-blue);
+}
+
+.footer-soc-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-primary-white);
+  margin-bottom: 20px;
 }
 
 /*Portfolio*/
@@ -530,15 +583,19 @@ p {
   cursor: pointer;
   padding: 6px 22px;
 }
-.secondary-button:hover {
+.secondary-button:hover,
+.secondary-button:focus {
   color: var(--color-primary-white);
   background-color: var(--color-blue);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .port-item {
@@ -546,6 +603,15 @@ p {
   flex-direction: column;
   width: 370px;
   height: 404px;
+}
+.port-item-link {
+  display: block;
+}
+
+.port-item-link:hover,
+.port-item-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .img-text {
@@ -569,7 +635,8 @@ p {
 .portfolio-text {
   font-weight: 700;
   font-size: 18px;
-  line-height: 36px;
+  line-height: calc(36 / 18);
   letter-spacing: 0.06em;
+  white-space: nowrap;
   color: var(--color-secondary-button);
 }
