@@ -640,3 +640,6 @@ p {
   white-space: nowrap;
   color: var(--color-secondary-button);
 }
+.stile-for-commit {
+  display: block;
+}
