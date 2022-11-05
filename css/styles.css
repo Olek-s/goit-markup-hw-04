@@ -640,7 +640,3 @@ p {
   white-space: nowrap;
   color: var(--color-secondary-button);
 }
-
-.test-for-commit {
-  display: block;
-}
